@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>CICDSample</groupId>
+  <artifactId>CICDSample</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+		<pluginManagement>
+			<plugins>
+	
+	
+				<plugin>
+				 <groupId>org.codehaus.mojo</groupId>  
+     				<artifactId>exec-maven-plugin</artifactId>  
+    				<version>1.6.0</version> 
+    					<configuration>  
+       						<classpathScope>test</classpathScope>
+        					<mainClass>jenkinsCICD.Driverscript</mainClass>  
+				       	</configuration>   
+     					<executions>  
+      						<execution>  
+       							<phase>test</phase>  
+       								<goals>  
+       								 	<goal>java</goal>  
+       								</goals>  
+				      		</execution>  
+				     	</executions>  
+				</plugin>
+				    
+				    <plugin>
+   <groupId>org.apache.maven.plugins</groupId>
+   <artifactId>maven-surefire-plugin</artifactId>
+   <version>2.12.4</version>
+   <configuration>
+      <systemPropertyVariables>
+         <automation.name>${automation.name}</automation.name>
+         <browser.name>${browser.name}</browser.name>
+         <browser.version>${browser.version}</browser.version>
+         <environment>${environment}</environment>
+         <platform.name>${platform.name}</platform.name>
+         <base.url>${base.url}</base.url>
+      </systemPropertyVariables>
+      <parallel>methods</parallel>
+      <threadCount>5</threadCount>
+      <suiteXmlFiles>
+         <suiteXmlFile>${testset}</suiteXmlFile>
+      </suiteXmlFiles>
+   </configuration>
+</plugin>
+
+ 
+
+
+			</plugins>
+		</pluginManagement>
+	</build>
+	
+	
+   <dependencies>
+    
+    <dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>6.8</version>
+    <scope>compile</scope>
+	</dependency>
+    
+ 	<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>3.12.0</version>
+	</dependency>
+	
+	<dependency>
+    <groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>2.41.2</version>
+	</dependency>
+	
+	<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.6</version>
+	</dependency>
+	
+	<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>4.0.1</version>
+	</dependency>
+	
+	<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>4.0.1</version>
+	</dependency>
+
+	<dependency>
+    <groupId>net.sourceforge.jexcelapi</groupId>
+    <artifactId>jxl</artifactId>
+    <version>2.6.12</version>
+	</dependency>
+
+
+  </dependencies>
+</project>
