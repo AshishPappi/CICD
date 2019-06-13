@@ -64,7 +64,7 @@ public class Loginpage extends TC001 {
 		act.clickjse(driver, logoutbtn);
 		act.waitfor(driver, 60);
 		act.alerthandling(driver, "accept");
-		grefReporterUtility.log("INFO", "logout");
+		logger.info("logout");
 		logger.info("logout");
 		logoutstatus = verfiyLogin.getText();
 		logger.info("password entrerd");
