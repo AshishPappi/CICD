@@ -37,7 +37,7 @@ public class TC001 extends Global {
 		logger.info("Extent report started");
 		grefReporterUtility.startTest();
 		PropertyConfigurator.configure("./log4j.properties");
-		logger.info("Extent report started");
+		logger.info("Extent report start");
 	}
 	
 	
