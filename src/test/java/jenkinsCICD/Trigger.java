@@ -7,7 +7,7 @@ public class Trigger {
 		
 	String value=	System.getProperty("automation.name");
 	String [] arr=value.split("#");
-	int count=arr.length;
+	int count1=arr.length;
 	
 	
 	

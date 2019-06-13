@@ -69,7 +69,7 @@ public class TC001 extends Global {
 
 		driver.get("http://demo.guru99.com/V4/");
 		grefReporterUtility.log("INFO", "browser launched with given url");
-		grefReporterUtility.log("INFO", "browser launched with gil");
+		grefReporterUtility.log("INFO", "b");
 		logger.info("browser launched with given url");
 		
 	}
