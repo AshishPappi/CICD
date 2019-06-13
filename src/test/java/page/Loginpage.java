@@ -67,7 +67,9 @@ public class Loginpage extends TC001 {
 		grefReporterUtility.log("INFO", "logout");
 		logger.info("logout");
 		logoutstatus = verfiyLogin.getText();
+		logger.info("logout successfull");
 		return logoutstatus;
+		
 
 	}
 
