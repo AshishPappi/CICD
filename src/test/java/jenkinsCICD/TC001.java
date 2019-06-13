@@ -37,7 +37,7 @@ public class TC001 extends Global {
 		logger.info("Extent report started");
 		grefReporterUtility.startTest();
 		PropertyConfigurator.configure("./log4j.properties");
-		
+		logger.info("Extent report started");
 	}
 	
 	
@@ -70,6 +70,7 @@ public class TC001 extends Global {
 		driver.get("http://demo.guru99.com/V4/");
 		grefReporterUtility.log("INFO", "browser launched with given url");
 		logger.info("browser launched with given url");
+		logger.info("browser launched with url");
 	}
 
 	@Test(dataProvider = "login")
