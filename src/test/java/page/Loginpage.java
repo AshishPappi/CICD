@@ -60,10 +60,10 @@ public class Loginpage extends TC001 {
 	}
 
 	public String logout() {
-		String imagepath=grefReporterUtility.getscreenshot(driver, "login");
-		grefReporterUtility.addscrenshottoextent(imagepath);
-		loginstatus = verfiyLogin.getText();
-		return loginstatus;
+		String logoutstatus = null;
+		act.clickjse(driver, logoutbtn);
+		act.waitfor(driver, 60);
+		act.alerthandling(driver, "accept");
 		grefReporterUtility.log("INFO", "logout");
 		logger.info("logout");
 		logoutstatus = verfiyLogin.getText();
