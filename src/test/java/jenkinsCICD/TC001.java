@@ -70,7 +70,7 @@ public class TC001 extends Global {
 		driver.get("http://demo.guru99.com/V4/");
 		grefReporterUtility.log("INFO", "browser launched with given url");
 		logger.info("browser launched with given url");
-		logger.info("browser launched with url");
+		
 	}
 
 	@Test(dataProvider = "login")

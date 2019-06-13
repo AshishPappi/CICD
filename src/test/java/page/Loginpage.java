@@ -68,6 +68,7 @@ public class Loginpage extends TC001 {
 		logger.info("logout");
 		logoutstatus = verfiyLogin.getText();
 		logger.info("password entrerd");
+		logger.info("logout successfull");
 		return logoutstatus;
 
 	}
