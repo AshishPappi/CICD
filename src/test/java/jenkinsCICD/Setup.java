@@ -11,20 +11,12 @@ import com.reports.ReporterUtility;
 
 public class Setup extends Global {
 	
-	
-	/*@BeforeSuite
-	public void init() {
-		grefReporterUtility = new ReporterUtility();
-		grefReporterUtility.initialize();
-		PropertyConfigurator.configure("./log4j.properties");
-		
-	}
+
 	
 	
 	
 	
-	
-	@AfterSuite
+	/*@AfterSuite
 	
 	public void teardown() {
 		
